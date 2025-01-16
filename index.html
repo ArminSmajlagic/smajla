@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
 	<link rel="stylesheet" href="assets/css/meyawo.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="assets/js/portfolio.js" defer></script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" onload="onLoadSite()">
 
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
@@ -368,16 +370,16 @@
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
             <!-- contact form -->
-            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+            <form action="" class="contact-form col-md-10 col-lg-8 m-auto" id="contact" onsubmit="sendEmail(event)">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>                 
+                        <input type="text" size="50" class="form-control" id="name" placeholder="Your Name" required>                 
                     </div>
                     <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Enter Email"requried>                 
+                        <input type="email" class="form-control" id="email"  placeholder="Enter Email"requried>                 
                     </div>
                     <div class="form-group col-sm-12">
-                        <textarea name="comment" id="comment" rows="6"   class="form-control" placeholder="Write Something"></textarea>
+                        <textarea name="comment" id="comment" rows="6" id="body" class="form-control" placeholder="Write Something"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
                         <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">                  
@@ -410,6 +412,6 @@
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 </html>
