@@ -2,7 +2,7 @@ function onLoadSite(){
     (function() {
         // https://dashboard.emailjs.com/admin/account
         emailjs.init({
-          publicKey: "hCoA1Ola99PM7D7C1",
+          publicKey: "rjNpZFhU",
         });
     })();
     
