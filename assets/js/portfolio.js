@@ -39,8 +39,8 @@ function sendEmail(event) {
     
     const templateParams1 = {
         email: "smajlagicarmin@gmail.com",
-        to_name: "Armin",
-        message: "Mail from " + name + " was sent with body "+body,
+        to_name: "From APP TO Armin",
+        message: "Mail from " + templateParams.email + " with Name " + name + " was sent with body "+body,
     };
 
     emailjs.send('service_fe0b3j7', 'template_i7vts0h', templateParams1)
