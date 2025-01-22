@@ -43,7 +43,7 @@ function sendEmail(event) {
     xhr.onload = function (response) {
         console.log(response);
         var jsonResponse = JSON.parse(xhr.responseText);
-        if(jsonResponse.data.status != "invalid"){
+        if(jsonResponse.data.status != "invalid" || !email.includes("asd") || !email.includes("@admin")){
             const templateParams = {
                 email: email,
                 to_name: name,
